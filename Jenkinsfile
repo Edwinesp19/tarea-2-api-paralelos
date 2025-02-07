@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Descargar Código') {
             steps {
-                git branch: 'main', url: 'https://github.com/Edwinesp19/tarea-2-paralelos'
+                git branch: 'main', url: 'https://github.com/Edwinesp19/tarea-2-api-paralelos'
             }
         }
 
