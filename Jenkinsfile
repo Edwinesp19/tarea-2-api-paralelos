@@ -10,16 +10,17 @@ pipeline {
 
         stage('Construir y Probar') {
             steps {
-                bat 'echo "Compilando código..."'
-                bat 'echo "Ejecutando pruebas..."'
+                sh 'echo "Compilando código..."'
+                sh 'echo "Ejecutando pruebas..."'
             }
         }
-stage('Desplegar en Servidor') {
+
+        stage('Desplegar en Servidor') {
             when {
                 branch 'main'
             }
             steps {
-                bat 'echo "Desplegando en el servidor..."'
+                sh 'echo "Desplegando en el servidor..."'
                 // Aquí puedes agregar comandos para desplegar la imagen Docker en tu servidor
             }
         }
